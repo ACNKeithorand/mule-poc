@@ -2,11 +2,6 @@ pipeline {
     agent any
     stages {
         
-       stage ('checkout') {
-        steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git-acn-id', url: 'ssh://git@github.com/ACNKeithorand/mule-poc.git']]])
-        }
-       }
         stage ('Package Stage') {
 
             steps {
