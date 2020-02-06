@@ -1,0 +1,75 @@
+[
+    {
+        "payment_type": "payment",
+        "id": "100833",
+        "amount": 5,
+        "status": "PROCESSING_ERROR",
+        "billing_account": {
+            "id": "19731",
+            "account_num": "1",
+            "external_account_num": null
+        },
+        "payment_method": {
+            "payment_method_type": "credit-card",
+            "id": "100737",
+            "nickname": "Credit Card Ending 4242",
+            "custom_field_values": [],
+            "multi_factor_auth": false,
+            "card_type": "VISA",
+            "first_name": "Charlie",
+            "last_name": "Brown",
+            "identifier_number": "Last 4: 4242",
+            "expiration_date": "01/2022",
+            "last_four": "4242"
+        },
+        "occurred_on": "2018-10-26T13:37:41-05:00",
+        "use_recurring_payment": false,
+        "unapplied_amount": 5,
+        "currency_code": "USD",
+        "payment_processor": {
+            "id": "102",
+            "type": "STRIPE"
+        },
+        "refunds": [],
+        "refunded_amount": 0,
+        "canceled_amount": 0,
+        "apply_automatically": true
+    },
+    {
+        "payment_type": "payment",
+        "id": "100834",
+        "amount": 10,
+        "authorization": "ch_1DPaOcDeBxpGXP8yUWgMpjam",
+        "status": "COMPLETED",
+        "billing_account": {
+            "id": "19731",
+            "account_num": "1",
+            "external_account_num": null
+        },
+        "payment_method": {
+            "payment_method_type": "credit-card",
+            "id": "100738",
+            "nickname": "Credit Card Ending 4242",
+            "custom_field_values": [],
+            "multi_factor_auth": false,
+            "card_type": "VISA",
+            "first_name": "Charlie",
+            "last_name": "Brown",
+            "identifier_number": "Last 4: 4242",
+            "expiration_date": "01/2022",
+            "last_four": "4242"
+        },
+        "occurred_on": "2018-10-26T13:50:19-05:00",
+        "use_recurring_payment": false,
+        "unapplied_amount": 0,
+        "currency_code": "USD",
+        "payment_processor": {
+            "id": "102",
+            "type": "STRIPE"
+        },
+        "refunds": [],
+        "refunded_amount": 0,
+        "canceled_amount": 0,
+        "apply_automatically": true
+    }
+]

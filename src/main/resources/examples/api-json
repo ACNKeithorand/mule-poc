@@ -1,0 +1,18 @@
+{
+  invoices: [
+    {
+      "account-number": "A84848",
+      "invoice-number": "893489",
+      status: "OPEN",
+      "payable-amount": "76.00",
+      "due-date": "2018-12-09"
+    }, 
+    {
+      "account-number": "A84848",
+      "invoice-number": "893488",
+      status: "PROCESSED",
+      "payable-amount": "76.00",
+      "due-date": "2018-11-09"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+#%RAML 1.0
+title: Billing System API
+description:
+version: 1.0.0
+protocols:
+  - HTTPS
+baseUri: https://mocksvc.mulesoft.com/mocks/4313691e-83ed-41ea-9559-6b7a6ea8caf4/billing-api/v1/ # baseUri: https://anypoint.mulesoft.com/billing-api/v1/
+
+
+traits: 
+  secured: !include schemas/ClientSecurity.raml
+
+
+/accounts:
+  /{account-number}:
+    /invoices:
+      #is: [secured]
+      get:
+        description: Retrieve invoices 
+        
+        responses: 
+          200:
+           body: 
+              application/json:
+                type: !include schemas/invoices/invoice-array.raml
+                example: !include schemas/invoices/invoice-sample
+          400:
+              body:
+                application/json:
+                  example: |
+                    "Bad Request"
+          401:
+              body:
+                application/json:
+                  example: |
+                    "UnAuthorized"
+          500:
+            body:
+              application/json:
+                example: |
+                  "Internal Server Error"
+
+    /payments:
+      #is: [secured]
+      get:
+        description: Retrieve Payments 
+        
+        responses: 
+          200:
+           body: 
+              application/json:
+                type: !include schemas/payments/payment-array.raml
+                example: !include schemas/payments/payment-sample
+          400:
+              body:
+                application/json:
+                  example: |
+                    "Bad Request"
+          401:
+              body:
+                application/json:
+                  example: |
+                    "UnAuthorized"
+          500:
+            body:
+              application/json:
+                example: |
+                  "Internal Server Error"
