@@ -4,7 +4,7 @@ pipeline {
         
        stage ('checkout') {
         steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '4d607dee-b679-47f0-9cb5-30e182c800b7', url: 'git@github.com:ACNKeithorland/mule-poc.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '4d607dee-b679-47f0-9cb5-30e182c800b7', url: 'ssh://git@github.com/ACNKeithorand/mule-poc.git']]])
         }
        }
         stage ('Package Stage') {
