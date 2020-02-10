@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         
-        stage ('Package Stage') {
+        stage ('Package') {
 
             steps {
                 withMaven(maven : 'apache-maven-3.5.4') {
